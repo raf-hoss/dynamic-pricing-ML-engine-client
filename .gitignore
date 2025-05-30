@@ -1,0 +1,46 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs and outputs
+*.log
+logs/
+
+# Data artifacts
+data/raw/
+data/processed/
+
+# Experiments & tracking
+experiments/tracking_with_mlflow/mlruns/
+experiments/tracking_with_mlflow/model_registry/
+
+# Environments
+.env
+.venv/
+.envrc
+
+# IDE files
+.vscode/
+.idea/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+
+# DVC
+.dvc/
+.dvc/cache/
+*.dvc
+dvc.yaml.lock
+
+# Misc
+.DS_Store

@@ -1,0 +1,20 @@
+paths:
+  raw_data: data/raw/sales_data.csv
+  catalog: data/raw/product_catalog.csv
+  processed_data: data/processed/clean_sales_data.csv
+  featured_data: data/processed/featured_sales_data.csv
+  predictions: data/processed/predicted_demand.csv
+  optimized_prices: data/processed/optimized_prices.csv
+  monitoring_output: data/processed/monitoring_results.csv
+  drift_output: data/processed/feature_drift_results.csv
+
+model:
+  random_state: 22
+  test_size: 0.2
+  num_boost_round: 100
+  early_stopping_rounds: 10
+  lightgbm_params:
+    objective: regression
+    metric: rmse
+    verbosity: -1
+    random_state: 22

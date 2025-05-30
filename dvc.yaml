@@ -1,0 +1,18 @@
+stages:
+  forecast:
+    cmd: python src/pipelines/forecasting_pipeline.py
+    deps:
+      - src/data/load_data.py
+      - src/data/preprocess.py
+      - src/features/build_features.py
+      - src/forecasting/forecaster.py
+    outs:
+      - data/processed/predicted_demand.csv
+
+  price_optimize:
+    cmd: python src/pipelines/pricing_pipeline.py
+    deps:
+      - src/pricing/pricing_engine.py
+      - data/processed/predicted_demand.csv
+    outs:
+      - data/processed/optimized_prices.csv

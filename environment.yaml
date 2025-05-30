@@ -1,0 +1,19 @@
+name: dynamic-pricing-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - scikit-learn
+  - lightgbm
+  - fastapi
+  - uvicorn
+  - pydantic
+  - mlflow
+  - nannyml
+  - pip
+  - pip:
+    - dvc
+    - pytest
