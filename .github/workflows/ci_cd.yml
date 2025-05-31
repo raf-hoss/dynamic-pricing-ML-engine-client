@@ -26,4 +26,5 @@ jobs:
         run: pwd
 
       - name: Run tests
+        working-directory: ${{ github.workspace }}
         run: PYTHONPATH=src pytest tests/
