@@ -1,9 +1,7 @@
-name: CI/CD
+ame: CI/CD
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
 
 jobs:
@@ -25,6 +23,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: ${{ github.workspace }}
         run: |
-          PYTHONPATH=${{ github.workspace }}/src pytest tests/
+          pytest tests/
