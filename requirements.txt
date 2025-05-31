@@ -8,5 +8,5 @@ prophet
 nannyml
 pyyaml
 httpx
-ipython==8.18.1
+ipython
 pytest
