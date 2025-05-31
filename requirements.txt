@@ -9,3 +9,4 @@ nannyml
 pyyaml
 httpx
 ipython==8.18.1
+pytest
