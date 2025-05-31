@@ -1,9 +1,11 @@
-from src.data.load_data import load_data_pandas
-from src.data.preprocess import preprocess_pandas
-from src.features.build_features import build_features
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from src.data.load_data import load_data_pandas
+from src.data.preprocess import preprocess_pandas
+from src.features.build_features import build_features
+
 
 def test_feature_engineering():
     _, sales_df = load_data_pandas()
