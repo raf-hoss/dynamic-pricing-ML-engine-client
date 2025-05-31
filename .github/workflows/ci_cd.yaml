@@ -29,4 +29,3 @@ jobs:
 
     - name: Run Tests
       run: PYTHONPATH=src pytest tests/
-        pytest tests/
