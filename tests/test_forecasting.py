@@ -3,6 +3,10 @@ from src.data.preprocess import preprocess_pandas
 from src.features.build_features import build_features
 from src.forecasting.forecaster import train_forecast_model
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 def test_forecasting_pipeline_runs():
     _, sales_df = load_data_pandas()
     clean_df = preprocess_pandas(sales_df)
