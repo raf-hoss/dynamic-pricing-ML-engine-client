@@ -1,6 +1,10 @@
 from src.data.load_data import load_data_pandas
 from src.data.preprocess import preprocess_pandas
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 def test_preprocess_returns_clean_df():
     _, sales_df = load_data_pandas()
     clean_df = preprocess_pandas(sales_df)
